@@ -1,0 +1,141 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+header {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: black;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.701);
+}
+
+.title {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.title h1 {
+    text-align: center;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    text-align: left;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.input label {
+    width: 100px;
+    font-weight: bold;
+}
+
+input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px auto;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+button {
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    color: black;
+    border: none;
+    padding: 10px;
+    margin: 3px;
+}
+
+.btn {
+    margin: auto;
+}
+
+button#calc:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+button#apag:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+#res {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+#risco {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+}

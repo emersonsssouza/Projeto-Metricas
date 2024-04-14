@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+Area de fontes
+*/
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgb(12, 12, 121), rgb(12, 12, 121), rgba(0, 0, 0, 0.937));
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+Header {
+    background-color: black;
+    width: 100vw;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+main {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: rgba(195, 14, 14, 0.763);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    widows: 300px;
+    height: auto;
+    margin: auto;
+    border: 2px solid black;
+}
+
+main button {
+    background-color: rgba(0, 0, 0, 0.638);
+    width: 200px;
+    padding: 0.5rem;
+    margin: auto 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+main button abbr {
+    text-decoration: none;
+}
+
+main button a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.3rem;
+}
