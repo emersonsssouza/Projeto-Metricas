@@ -4,11 +4,32 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "Faroeste";
+    src: url(/Fonts/Vanilla\ Whale.otf);
+}
+
+@font-face {
+    font-family: "Letters";
+    src: url(/Fonts/Hanged\ Letters.ttf);
+}
+
+@font-face {
+    font-family: "LetterText";
+    src: url(/Fonts/Railway\ To\ Hells.ttf);
+}
+
+@font-face {
+    font-family: "Paragraphy";
+    src: url(/Fonts/False.ttf);
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.877);
+    background-image: linear-gradient(to bottom, black 5%, purple);
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -21,6 +42,13 @@ header h1 {
     color: white;
     padding: 0.5rem;
     text-align: center;
+    font-family: "Faroeste";
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+header h1 span {
+    font-size: 2rem;
 }
 
 .box {
@@ -34,16 +62,16 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
     margin: auto;
     border: 2px solid white;
     border-radius: 5px;
-    background-color: rgba(105, 105, 105, 0.464);
+    background-color: rgb(106, 7, 148);
 }
 
 .box-content {
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .box-content p {
@@ -53,8 +81,19 @@ header h1 {
     font-weight: bold;
 }
 
+.box-content>#p1 {
+    font-family: "Letters";
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+
+}
+
 .box-content>#p2 {
+    font-family: "Paragraphy";
     font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 0.8rem;
 }
 
 .box-container {
@@ -67,7 +106,9 @@ header h1 {
 
 label {
     width: 90px;
-    font-weight: bold;
+    font-family: "LetterText";
+    font-weight: normal;
+    color: white;
 }
 
 input {
@@ -82,7 +123,14 @@ input {
     color: black;
 }
 
+.btn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 button {
+    width: 100%;
     padding: 7px;
     margin: 2px;
     font-size: 15px;
@@ -109,7 +157,257 @@ div#res {
     margin: 10px auto;
     text-align: center;
     font-size: 17px;
-    background-color: rgba(0, 0, 0, 0.677);
-    color: white;
+    background-color: white;
+    color: #000;
     border-radius: 5px;
+}
+
+.title-reserva {
+    display: none;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 330px) {
+    header h1 {
+        font-size: 1.7rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 1.2rem;
+    }
+
+    body {
+        width: 100vw;
+        background-color: black;
+        background-image: none;
+    }
+
+    .box {
+        display: flex;
+        position: relative;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        margin: 0;
+        padding: 2px;
+    }
+
+    p.title-reserva {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: "Letters";
+        letter-spacing: 10px;
+        font-size: 2rem;
+    }
+
+    #p1 {
+        display: none;
+    }
+
+    #p2 {
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0;
+        display: none;
+    }
+
+    .box-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-container button {
+        width: 100%;
+    }
+}
+
+/*Responsividade para SmartPhones Grandes*/
+@media screen and (max-width: 760px) {
+    header h1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        position: relative;
+        width: 90vw;
+        height: auto;
+        margin: -5rem 0;
+    }
+
+    p.title-reserva {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: "Letters";
+        letter-spacing: 10px;
+        font-size: 2rem;
+    }
+
+    #p1 {
+        display: none;
+    }
+
+    #p2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-align: justify;
+        padding: 0;
+    }
+
+    .box-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+    }
+
+    .box-container button {
+        width: 100%;
+    }
+
+    #res {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+/*Midia para dispositivos modo paisagem*/
+@media screen and (max-width: 930px) and (orientation: landscape) {
+    header {
+        display: none;
+    }
+
+    body {
+        width: 100vw;
+        background-color: black;
+        background-image: none;
+        background-repeat: none;
+        align-content: center;
+    }
+
+    .box {
+        width: 80vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .box-content {
+        padding-top: 0px;
+    }
+
+    p.title-reserva {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: "Letters";
+        letter-spacing: 10px;
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    #p1 {
+        display: none;
+    }
+
+    #p2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-align: justify;
+        display: none;
+    }
+
+    .box-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 0;
+    }
+
+    .box-container button {
+        width: 100%;
+    }
+
+    #res {
+        height: 100px;
+        width: 100%;
+    }
+}
+
+/*Responsividade para Tablets*/
+@media (min-width: 768px) and (orientation: portrait) {
+    header h1 {
+        font-size: 4rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 2.5rem;
+    }
+
+    body {
+        width: 100vw;
+        height: auto;
+        background-color: black;
+        background-image: none;
+        overflow: none;
+    }
+
+    .box {
+        width: 80vw;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .box-content {
+        padding-top: 0px;
+    }
+
+    p.title-reserva {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: "Letters";
+        letter-spacing: 10px;
+        font-size: 3rem;
+        padding-top: 5px;
+    }
+
+    #p1 {
+        display: none;
+    }
+
+    #p2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-align: justify;
+        display: none;
+    }
+
+    .box-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
+
+    .box-container button {
+        width: 100%;
+    }
+
+    #res {
+        height: 200px;
+        width: 100%;
+    }
 }

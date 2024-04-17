@@ -6,15 +6,15 @@
     box-sizing: border-box;
 }
 
-/*
-Area de fontes
-*/
+@font-face {
+    font-family: "Faroeste";
+    src: url(Fonts/Vanilla\ Whale.otf);
+}
+
 body {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgb(12, 12, 121), rgb(12, 12, 121), rgba(0, 0, 0, 0.937));
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, black 5%, purple);
 }
 
 Header {
@@ -25,6 +25,13 @@ Header {
 header h1 {
     color: white;
     text-align: center;
+    font-family: "Faroeste";
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+header h1 span {
+    font-size: 2rem;
 }
 
 main {
@@ -32,7 +39,7 @@ main {
     top: 10%;
     left: 50%;
     transform: translate(-50%, -10%);
-    background-color: rgba(195, 14, 14, 0.763);
+    background-color: rgb(106, 7, 148);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,15 +48,17 @@ main {
     height: auto;
     margin: auto;
     border: 2px solid black;
+    border-radius: 0.5rem;
 }
 
-main button {
+main button.btn {
     background-color: rgba(0, 0, 0, 0.638);
     width: 200px;
     padding: 0.5rem;
     margin: auto 0.5rem;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 main button abbr {
@@ -60,6 +69,14 @@ main button a {
     color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
+}
+
+main button a:hover {
+    text-decoration: underline;
+}
+
+main button:hover {
+    background-color: red;
 }
 
 footer {
@@ -86,4 +103,117 @@ footer p a {
     color: white;
     text-decoration: none;
     margin-left: 0.3rem;
+}
+
+/*Responsividade*/
+/*Responsividade para pequenos dispositivos (Iphone5, IphoneSE*/
+@media screen and (max-width: 320px) {
+    header h1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 1rem;
+    }
+
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    main button {
+        margin: 1rem auto;
+    }
+}
+
+/*Responsividade para SmartPhones Grandes*/
+@media screen and (max-width: 760px) {
+    header h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 1.5rem;
+    }
+
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    main button {
+        margin: 1rem auto;
+    }
+}
+
+/*Midia para dispositivos modo paisagem*/
+@media screen and (max-width: 930px) and (orientation: landscape) {
+    header h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 1.5rem;
+    }
+
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+    }
+
+    main button {
+        margin: 1rem auto;
+    }
+}
+
+/*Responsividade para Tablets*/
+@media (min-width: 768px) and (orientation: portrait) {
+    header h1 {
+        font-size: 3.5rem;
+        padding: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 2rem;
+    }
+
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+    }
+
+    main button {
+        font-size: 2rem;
+        margin: 1rem auto;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
 }
