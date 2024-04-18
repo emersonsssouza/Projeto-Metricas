@@ -8,8 +8,13 @@ function Calcular() {
     let soma = (peso / (altura * altura)).toFixed(1);
 
     if (nome == "" && peso == "" && altura == "") {
-        console.log("Insira os dados");
         resultado.innerHTML = "Complete os campos acima por favor!";
+    } else if (peso == 0) {
+        resultado.innerHTML = "Peso é um campo obrigatório";
+    } else if (altura == 0) {
+        resultado.innerHTML = "Altura é um campo obrigatório";
+    } else if (peso == 0 && altura == 0) {
+        resultado.innerHTML = "Preencha todos os campos por favor";
     } else if (soma < 18.5) {
         resultado.innerHTML = `${nome} seu IMC é ${soma} e voce esta abaixo do peso`;
         risco.innerHTML = "<strong>Abaixo do Peso 1</strong> - Anorexia, bulimia, osteoporose e alto consumo de massa muscular"
