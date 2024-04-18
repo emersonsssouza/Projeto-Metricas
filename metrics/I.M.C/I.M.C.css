@@ -52,24 +52,23 @@ body {
 }
 
 main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    text-align: left;
     padding: 10px;
-    background-color: rgb(106, 7, 148);
+    background-color: transparent;
+    border: 0px solid white;
     border-radius: 5px;
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px black;
 }
 
 .calculadora {
     display: flex;
     flex-direction: column;
-    width: 650px;
+    width: 500px;
     height: auto;
     padding: 10px;
-    margin: 10px;
+    margin: auto;
 }
 
 .input {
@@ -156,46 +155,45 @@ button#apag:hover {
 
 @media screen and (max-width: 330px) {
     body {
-        background-color: black;
-        background-image: none;
-        height: 100vh;
+        background-color: purple;
         background-repeat: no-repeat;
-        overflow: none;
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 0.5rem;
     }
 
     header h1 span {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 
     main {
-        position: relative;
-        margin-top: 0rem;
-        margin-bottom: 2rem;
-        padding: 1px;
-        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100vw;
         height: auto;
+        background-color: transparent;
+        padding: 0.5rem;
+        box-shadow: none;
     }
 
-    .title h1 {
-        font-size: 1rem;
+    .calculadora {
+        margin: auto;
+        width: 300px;
+        height: auto;
+        background-color: transparent;
     }
 
     .btn {
-        display: inline-block;
-    }
-
-    .btn button {
-        width: max-content;
+        margin: 0;
     }
 
     #res,
     #risco {
-        height: 100px;
+        height: 50px;
         hyphens: auto;
         text-align: justify;
     }
@@ -213,9 +211,20 @@ button#apag:hover {
     }
 
     main {
-        position: relative;
-        width: 90vw;
+        width: auto;
         height: auto;
+        padding: 0.5rem;
+        margin: auto;
+        box-shadow: none;
+    }
+
+    .calculadora {
+        width: auto;
+    }
+
+    main button {
+        margin: 1rem auto;
+        width: 100%;
     }
 
     .title h1 {
@@ -233,9 +242,9 @@ button#apag:hover {
 /*Midia para dispositivos modo paisagem*/
 @media screen and (max-width: 930px) and (orientation: landscape) {
     body {
+        background-color: purple;
         background-image: none;
-        background-color: black;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
     }
 
     header h1 {
@@ -248,9 +257,8 @@ button#apag:hover {
     }
 
     main {
-        position: relative;
-        width: 90vw;
-        margin: 10rem 0;
+        width: 100%;
+        margin: 0rem 0;
     }
 
     #res,
@@ -274,7 +282,7 @@ button#apag:hover {
 
 
     main {
-        height: 70vh;
+        height: ;
     }
 
     .input {
@@ -285,8 +293,6 @@ button#apag:hover {
         width: 100%;
         display: flex;
         flex-direction: row;
-        border: 3px inset black;
-        outline: none;
         padding: 5px;
     }
 
